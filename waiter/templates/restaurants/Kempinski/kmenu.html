@@ -1,0 +1,15 @@
+{% block content %}
+  {% for food in foods %}
+{% if food.restaurant.name=="Kempinski"}
+<!-- <div class="styler" style="background-color: yellow;"> -->
+<h1> {{food.name}} </h1>
+<img src="{{food.picture.url}}"alt="Image">
+<h2> {{food.price}} </h2>
+<h3> {{food.availability}} </h3>
+
+<!-- </div> -->
+{% endif %}
+  {% endfor %}
+  <a href="order" class="btn btn-block"><button>Place An Order</button></a>
+
+{% endblock %}

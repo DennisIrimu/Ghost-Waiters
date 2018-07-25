@@ -1,0 +1,63 @@
+<!-- <form action="/your-name/" method="post">
+  <label for="your_name">Your name: </label>
+  <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+  <input type="submit" value="OK">
+</form> -->
+
+
+<!--
+<form action="/payment/" method="post">
+  {% csrf_token %} {{ form }}
+  <input type="submit" value="Submit" />
+</form> -->
+
+<form action="" method="post" style="background-image: url('../media/images/order.jpg')">
+  <h1>Order Form</h1>
+  <div class="leee">
+    <p id="name" class="order">
+      <p>Customer Name</p>{{ form.customer_name }}</p>
+    <br>
+    <p id="food" class="order">
+      <p>Your Order</p>{{ form.food_name }}</p>
+    <br>
+    <p id="table" class="order">
+      <p>Table Number</p>{{ form.table_number }}</p>
+    <br>
+    <p id="quantity" class="order">
+      <p>Quantity</p>{{ form.quantity }}</p>
+    <p id="mode" class="order">
+      <p>Plate/Takeaway</p>{{ form.mode }}</p>
+    {% csrf_token %}
+    <div class="sub">
+      <input type="submit" value="Submit Details">
+    </div>
+</form>
+</div>
+
+<style media="screen">
+  .leee {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    color: #c71585;
+  }
+
+p {
+  color: #99BBBB;
+}
+
+  .sub {
+    font-size: 100px;
+    background-color: #99BBBB ;
+
+  }
+form {
+  background-repeat: no-repeat;
+background-size: cover;
+}
+</style>

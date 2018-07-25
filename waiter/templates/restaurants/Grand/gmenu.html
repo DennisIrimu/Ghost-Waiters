@@ -1,0 +1,9 @@
+<p1> Awesome </p1>
+{% block content %}
+  {% for food in foods %}
+<h1> {{food.name}} </h1>
+<img src="{{food.picture.url}}"alt="Image">
+<h2> {{food.price}} </h2>
+<h3> {{food.availability}} </h3>
+  {% endfor %}
+{% endblock %}

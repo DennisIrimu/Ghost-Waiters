@@ -1,0 +1,19 @@
+<!-- <p1> Awesome </p1> -->
+  {% for food in foods %}
+
+
+<div class="column">
+<div class="styler" style="text-align: center">
+{% if food.picture %}
+<img src="{{food.picture.url}}" alt="">
+{% endif %}
+<h1> {{food.name}} </h1>
+<h2> {{food.price}} </h2>
+<h3> {{food.availability}} </h3>
+
+<a class="btn btn-success" style="background-color: ;" href="/order/" target="_blank">Place An Order</a>
+
+</div>
+</div>
+
+  {% endfor %}
